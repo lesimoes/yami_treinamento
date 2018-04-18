@@ -14,10 +14,13 @@ app.get('/',function(req,res){
 
 //SETA UMA OUTRA ROTA PARA MINHA APLICAÇÃO
 app.get('/pessoa/:id',function(req,res){
-	pessoa.getNameById(req.params.id,function(response){
-		res.send(response);
-	});
+	pessoa.getNameById(req.params.id)
+	.then(value => { pessoa.searchGoogle(value)
+	.then(ress => res.send(ress)) })
+
 });
+
+
 
 //SETA A PORTA A SER USADA PELO NODE
 app.listen(3000);
