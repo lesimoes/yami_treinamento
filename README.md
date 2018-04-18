@@ -1,7 +1,7 @@
-*** Executar
+### Executar
 node app.js
 
-*** Executar em modo debu
+### Executar em modo debu
 node --inspect app.js
 
 Digitar no Chrome
